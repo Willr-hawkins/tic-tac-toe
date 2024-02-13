@@ -11,7 +11,18 @@ def new_game():
     player_name = input('Please enter your name:\n')
 
 
+def game_board():
+    board_numbers = [1,2,3,4,5,6,7,8,9]
+    board = [[1,2,3], [4,5,6], [7,8,9]]
+    rows = 3
+    cols = 3
 
+    for x in range(rows):
+        print('\n+---+---+---+')
+        print('|', end = '')
+        for y in range(cols):
+            print('', board[x][y], end = ' |')
+    print('\n+---+---+---+')
 
 def main():
     """
