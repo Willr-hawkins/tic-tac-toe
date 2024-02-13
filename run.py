@@ -11,3 +11,13 @@ def new_game():
     player_name = input('Please enter your name:\n')
 
 
+
+
+def main():
+    """
+    Runs all the games functions.
+    """
+    new_game()
+    game_board()
+
+main()
