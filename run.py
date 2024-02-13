@@ -1,4 +1,12 @@
-from random import randint
+import random
+
+### Global variables:
+
+board_numbers = [1,2,3,4,5,6,7,8,9]
+board = [[1,2,3], [4,5,6], [7,8,9]]
+rows = 3
+cols = 3
+
 
 def new_game():
     """
@@ -57,7 +65,36 @@ def update_board(num, turn):
         game_board[2][2] = turn
 
 
-def 
+def get_board_values():
+    """
+    Gets the value for the number on the board,
+    whether it is 'X' (players turn) or 'O' (computers turn).
+    """
+
+    end_game = False
+    player_turn = 'X'
+    computer_turn = 'O'
+    turn_number = 0
+
+    while(end_game == False):
+        if (turn_number % 2 == 1):
+            game_board()
+            player_choice = int(input('\nPlease choose a number between 1 - 9:'))
+            if (player_choice >= 1 or player_choice <= 9):
+                update_board(player_choice, player_turn)
+                board_numbers.remove(player_choice) 
+            else:
+                print('Invalid number, please pick again.')
+            turn_number += 1
+        else:
+            while(True):
+                computer_choice = random.choice(board_numbers)
+                print(f'{computer_choice} was picked by the computer.\n')
+                if(computer_choice in board_numbers):
+                    update_board(computer_choice, computer_turn)
+                    board_numbers.remove(computer_choice)
+                    turn_number += 1
+                    break
 
 
 def main():
@@ -66,5 +103,6 @@ def main():
     """
     new_game()
     game_board()
+    turn = get_board_values()
 
 main()
