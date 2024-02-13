@@ -1,3 +1,13 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+from random import randint
+
+def new_game():
+    """
+    Introduce the player to the game, ask for player name input.
+    """
+    print('You are now playing Tic Tac Toe!')
+    print('_' * 35)
+    print('This is a single player game against a computer.')
+    print('_' * 35)
+    player_name = input('Please enter your name:\n')
+
+
