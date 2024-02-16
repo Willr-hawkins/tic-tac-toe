@@ -1,4 +1,5 @@
 import random
+from art import *
 
 ### Global variables:
 
@@ -13,7 +14,8 @@ def new_game():
     """
     Introduce the player to the game, ask for player name input.
     """
-    print('You are now playing Tic Tac Toe!')
+    Art = text2art('Tic Tac Toe')
+    print(Art)
     print('_' * 35)
     print('This is a single player game against a computer.')
     print('_' * 35)
@@ -75,7 +77,7 @@ def get_board_values():
     while(end_game == False):
         if (turn_number % 2 == 1):
             game_board()
-            player_choice = int(input('\nPlease choose a number between 1 - 9:'))
+            player_choice = int(input('\nPlease choose a number between 1 - 9:\n'))
             if (player_choice >= 1 or player_choice <= 9):
                 update_board(player_choice, player_turn)
                 board_numbers.remove(player_choice) 
