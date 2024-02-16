@@ -12,7 +12,7 @@ board_numbers = [1,2,3,4,5,6,7,8,9]
 board = [[1,2,3], [4,5,6], [7,8,9]]
 rows = 3
 cols = 3
-player_turn = (Fore.GREEN + 'X')
+player_turn = (Fore.BLUE + 'X')
 computer_turn = (Fore.LIGHTMAGENTA_EX + 'O')
 
 
@@ -24,9 +24,9 @@ def new_game():
     Art = text2art('Tic Tac Toe')
     print(Art)
     print('_' * 35)
-    print('This is a single player game against a computer.')
+    print('\nThis is a single player game against a computer.\n')
     print('_' * 35)
-    player_name = input('Please enter your name:\n')
+    player_name = input('\nPlease enter your name:\n')
 
 
 def game_board():
@@ -78,54 +78,70 @@ def check_winner(board):
     """
     ### Checks x axis for winner
     if  (board[0][0] == player_turn and board[0][1] == player_turn and board[0][2] == player_turn):
-        print('Well Done! The player won.')
+        print('\nWell Done! The player won.\n')
+        print('_' * 35)
         return player_turn
     elif (board[0][0] == computer_turn and board[0][1] == computer_turn and board[0][2] == computer_turn):
-        print('Unlucky! The computer won.')
+        print('\nUnlucky! The computer won.\n')
+        print('_' * 35)
         return computer_turn
     elif (board[1][0] == player_turn and board[1][1] == player_turn and board[1][2] == player_turn):
-        print('Well Done! The player won.')
+        print('\nWell Done! The player won.\n')
+        print('_' * 35)
         return player_turn
     elif (board[1][0] == computer_turn and board[1][1] == computer_turn and board[1][2] == computer_turn):
-        print('Unlucky! The computer won.')
+        print('\nUnlucky! The computer won.\n')
+        print('_' * 35)
         return computer_turn
     elif (board[2][0] == player_turn and board[2][1] == player_turn and board[2][2] == player_turn):
-        print('Well Done! The player won.')
+        print('\nWell Done! The player won.\n')
+        print('_' * 35)
         return player_turn
     elif (board[2][0] == computer_turn and board[2][1] == computer_turn and board[2][2] == computer_turn):
-        print('Unlucky! The computer won.')
+        print('\nUnlucky! The computer won.\n')
+        print('_' * 35)
         return computer_turn
     ### Checks y axis for winner
     elif (board[0][0] == player_turn and board[1][0] == player_turn and board[2][0] == player_turn):
-        print('Well Done! The player won.')
+        print('\nWell Done! The player won.\n')
+        print('_' * 35)
         return player_turn
     elif (board[0][0] == computer_turn and board[1][0] == computer_turn and board[2][0] == computer_turn):
-        print('Unlucky! The computer won.')
+        print('\nUnlucky! The computer won.\n')
+        print('_' * 35)
         return computer_turn
     elif (board[0][1] == player_turn and board[1][1] == player_turn and board[2][1] == player_turn):
-        print('Well Done! The player won.')
+        print('\nWell Done! The player won.\n')
+        print('_' * 35)
         return player_turn
     elif (board[0][1] == computer_turn and board[1][1] == computer_turn and board[2][1] == computer_turn):
-        print('Unlucky! The computer won.')
+        print('\nUnlucky! The computer won.\n')
+        print('_' * 35)
         return computer_turn
     elif (board[0][2] == player_turn and board[1][2] == player_turn and board[2][2] == player_turn):
-        print('Well Done! The player won.')
+        print('\nWell Done! The player won.\n')
+        print('_' * 35)
         return player_turn
     elif (board[0][2] == computer_turn and board[1][2] == computer_turn and board[2][2] == computer_turn):
-        print('Unlucky! The computer won.')
+        print('\nUnlucky! The computer won.\n')
+        print('_' * 35)
         return computer_turn
     ### check diagonals for winner 
     elif (board[0][0] == player_turn and board[1][1] == player_turn and board[2][2] == player_turn):
-        print('Well Done! The player won.')
+        print('\nWell Done! The player won.\n')
+        print('_' * 35)
         return player_turn
     elif (board[0][0] == computer_turn and board[1][1] == computer_turn and board[2][2] == computer_turn):
-        print('Unlucky! The computer won.')
+        print('\nUnlucky! The computer won.\n')
+        print('_' * 35)
         return computer_turn
     elif (board[2][0] == player_turn and board[1][1] == player_turn and board[0][2] == player_turn):
-        print('Well Done! The player won.')
+        print('\nWell Done! The player won.\n')
+        print('_' * 35)
         return player_turn
     elif (board[2][0] == computer_turn and board[1][1] == computer_turn and board[0][2] == computer_turn):
-        print('Unlucky! The computer won.')
+        print('\nUnlucky! The computer won.\n')
+        print('_' * 35)
         return computer_turn
     ### No winner 
     else:
@@ -154,7 +170,7 @@ def get_board_values():
         else:
             while(True):
                 computer_choice = random.choice(board_numbers)
-                print(f'{computer_choice} was picked by the computer.\n')
+                print(f'\n{computer_choice} was picked by the computer.\n')
                 print('_' * 35)
                 if(computer_choice in board_numbers):
                     update_board(computer_choice, computer_turn)
@@ -164,8 +180,8 @@ def get_board_values():
         
         winner = check_winner(board)
         if (winner != 'N'):
-            print('Game Over! Thank you for playing!\n')
-
+            print('\nGame Over! Thank you for playing!\n')
+            break
 
 def main():
     """
