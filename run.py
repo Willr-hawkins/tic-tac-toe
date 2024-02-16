@@ -76,7 +76,7 @@ def get_board_values():
 
     end_game = False
     player_turn = (Fore.GREEN + 'X')
-    computer_turn = (Fore.CYAN + 'O')
+    computer_turn = (Fore.LIGHTMAGENTA_EX + 'O')
     turn_number = 0
 
     while(end_game == False):
