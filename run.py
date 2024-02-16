@@ -12,6 +12,8 @@ board_numbers = [1,2,3,4,5,6,7,8,9]
 board = [[1,2,3], [4,5,6], [7,8,9]]
 rows = 3
 cols = 3
+player_turn = (Fore.GREEN + 'X')
+computer_turn = (Fore.LIGHTMAGENTA_EX + 'O')
 
 
 
@@ -68,19 +70,78 @@ def update_board(num, turn):
         board[2][2] = turn
 
 
+def check_winner(board):
+    """
+    Checks all ways either the player or computer could win.
+    And whether it is the player or computer that wins, or if
+    there is no winner.
+    """
+    ### Checks x axis for winner
+    if  (board[0][0] == player_turn and board[0][1] == player_turn and board[0][2] == player_turn):
+        print('Well Done! The player won.')
+        return player_turn
+    elif (board[0][0] == computer_turn and board[0][1] == computer_turn and board[0][2] == computer_turn):
+        print('Unlucky! The computer won.')
+        return computer_turn
+    elif (board[1][0] == player_turn and board[1][1] == player_turn and board[1][2] == player_turn):
+        print('Well Done! The player won.')
+        return player_turn
+    elif (board[1][0] == computer_turn and board[1][1] == computer_turn and board[1][2] == computer_turn):
+        print('Unlucky! The computer won.')
+        return computer_turn
+    elif (board[2][0] == player_turn and board[2][1] == player_turn and board[2][2] == player_turn):
+        print('Well Done! The player won.')
+        return player_turn
+    elif (board[2][0] == computer_turn and board[2][1] == computer_turn and board[2][2] == computer_turn):
+        print('Unlucky! The computer won.')
+        return computer_turn
+    ### Checks y axis for winner
+    elif (board[0][0] == player_turn and board[1][0] == player_turn and board[2][0] == player_turn):
+        print('Well Done! The player won.')
+        return player_turn
+    elif (board[0][0] == computer_turn and board[1][0] == computer_turn and board[2][0] == computer_turn):
+        print('Unlucky! The computer won.')
+        return computer_turn
+    elif (board[0][1] == player_turn and board[1][1] == player_turn and board[2][1] == player_turn):
+        print('Well Done! The player won.')
+        return player_turn
+    elif (board[0][1] == computer_turn and board[1][1] == computer_turn and board[2][1] == computer_turn):
+        print('Unlucky! The computer won.')
+        return computer_turn
+    elif (board[0][2] == player_turn and board[1][2] == player_turn and board[2][2] == player_turn):
+        print('Well Done! The player won.')
+        return player_turn
+    elif (board[0][2] == computer_turn and board[1][2] == computer_turn and board[2][2] == computer_turn):
+        print('Unlucky! The computer won.')
+        return computer_turn
+    ### check diagonals for winner 
+    elif (board[0][0] == player_turn and board[1][1] == player_turn and board[2][2] == player_turn):
+        print('Well Done! The player won.')
+        return player_turn
+    elif (board[0][0] == computer_turn and board[1][1] == computer_turn and board[2][2] == computer_turn):
+        print('Unlucky! The computer won.')
+        return computer_turn
+    elif (board[2][0] == player_turn and board[1][1] == player_turn and board[0][2] == player_turn):
+        print('Well Done! The player won.')
+        return player_turn
+    elif (board[2][0] == computer_turn and board[1][1] == computer_turn and board[0][2] == computer_turn):
+        print('Unlucky! The computer won.')
+        return computer_turn
+    ### No winner 
+    else:
+        return 'N'
+
+
 def get_board_values():
     """
     Gets the value for the number on the board,
     Whether it is 'X' (players turn) or 'O' (computers turn).
     """
-
     end_game = False
-    player_turn = (Fore.GREEN + 'X')
-    computer_turn = (Fore.LIGHTMAGENTA_EX + 'O')
     turn_number = 0
 
     while(end_game == False):
-        if (turn_number % 2 == 1):
+        if (turn_number % 2 == 0):
             game_board()
             player_choice = int(input('\nPlease choose a number between 1 - 9:\n'))
             print('_' * 35)
@@ -100,23 +161,21 @@ def get_board_values():
                     board_numbers.remove(computer_choice)
                     turn_number += 1
                     break
+        
+        winner = check_winner(board)
+        if (winner != 'N'):
+            print('Game Over! Thank you for playing!\n')
 
-
-def check_winner():
-    """
-    Checks all ways either the player or computer could win.
-    And whether it is the player or computer that wins, or if
-    there is no winner.
-    """
 
 def main():
     """
     Runs all the games functions.
     """
     new_game()
-    game_board()
+    check_winner(board)
     get_board_values()
     
     
 main()
+
 
