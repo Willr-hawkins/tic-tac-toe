@@ -14,6 +14,8 @@ rows = 3
 cols = 3
 player_turn = (Fore.BLUE + 'X')
 computer_turn = (Fore.LIGHTMAGENTA_EX + 'O')
+winnerP = (Fore.GREEN + '\nWell Done! The player won.\n')
+winnerC = (Fore.RED + '\nUnlucky! The computer won.\n')
 
 
 
@@ -78,69 +80,69 @@ def check_winner(board):
     """
     ### Checks x axis for winner
     if  (board[0][0] == player_turn and board[0][1] == player_turn and board[0][2] == player_turn):
-        print('\nWell Done! The player won.\n')
+        print(winnerP)
         print('_' * 35)
         return player_turn
     elif (board[0][0] == computer_turn and board[0][1] == computer_turn and board[0][2] == computer_turn):
-        print('\nUnlucky! The computer won.\n')
+        print('winnerC')
         print('_' * 35)
         return computer_turn
     elif (board[1][0] == player_turn and board[1][1] == player_turn and board[1][2] == player_turn):
-        print('\nWell Done! The player won.\n')
+        print(winnerP)
         print('_' * 35)
         return player_turn
     elif (board[1][0] == computer_turn and board[1][1] == computer_turn and board[1][2] == computer_turn):
-        print('\nUnlucky! The computer won.\n')
+        print('winnerC')
         print('_' * 35)
         return computer_turn
     elif (board[2][0] == player_turn and board[2][1] == player_turn and board[2][2] == player_turn):
-        print('\nWell Done! The player won.\n')
+        print(winnerP)
         print('_' * 35)
         return player_turn
     elif (board[2][0] == computer_turn and board[2][1] == computer_turn and board[2][2] == computer_turn):
-        print('\nUnlucky! The computer won.\n')
+        print('winnerC')
         print('_' * 35)
         return computer_turn
     ### Checks y axis for winner
     elif (board[0][0] == player_turn and board[1][0] == player_turn and board[2][0] == player_turn):
-        print('\nWell Done! The player won.\n')
+        print(winnerP)
         print('_' * 35)
         return player_turn
     elif (board[0][0] == computer_turn and board[1][0] == computer_turn and board[2][0] == computer_turn):
-        print('\nUnlucky! The computer won.\n')
+        print(winnerC)
         print('_' * 35)
         return computer_turn
     elif (board[0][1] == player_turn and board[1][1] == player_turn and board[2][1] == player_turn):
-        print('\nWell Done! The player won.\n')
+        print(winnerP)
         print('_' * 35)
         return player_turn
     elif (board[0][1] == computer_turn and board[1][1] == computer_turn and board[2][1] == computer_turn):
-        print('\nUnlucky! The computer won.\n')
+        print('winnerC')
         print('_' * 35)
         return computer_turn
     elif (board[0][2] == player_turn and board[1][2] == player_turn and board[2][2] == player_turn):
-        print('\nWell Done! The player won.\n')
+        print(winnerP)
         print('_' * 35)
         return player_turn
     elif (board[0][2] == computer_turn and board[1][2] == computer_turn and board[2][2] == computer_turn):
-        print('\nUnlucky! The computer won.\n')
+        print('winnerC')
         print('_' * 35)
         return computer_turn
     ### check diagonals for winner 
     elif (board[0][0] == player_turn and board[1][1] == player_turn and board[2][2] == player_turn):
-        print('\nWell Done! The player won.\n')
+        print(winnerP)
         print('_' * 35)
         return player_turn
     elif (board[0][0] == computer_turn and board[1][1] == computer_turn and board[2][2] == computer_turn):
-        print('\nUnlucky! The computer won.\n')
+        print('winnerC')
         print('_' * 35)
         return computer_turn
     elif (board[2][0] == player_turn and board[1][1] == player_turn and board[0][2] == player_turn):
-        print('\nWell Done! The player won.\n')
+        print(winnerP)
         print('_' * 35)
         return player_turn
     elif (board[2][0] == computer_turn and board[1][1] == computer_turn and board[0][2] == computer_turn):
-        print('\nUnlucky! The computer won.\n')
+        print('winnerC')
         print('_' * 35)
         return computer_turn
     ### No winner 
