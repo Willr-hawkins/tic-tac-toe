@@ -1,8 +1,13 @@
+### Imports for libaries
 import random
 from art import *
+import colorama
+from colorama import Fore, Style
+
+### Automatically reset the color.
+colorama.init(autoreset=True)
 
 ### Global variables:
-
 board_numbers = [1,2,3,4,5,6,7,8,9]
 board = [[1,2,3], [4,5,6], [7,8,9]]
 rows = 3
@@ -66,18 +71,19 @@ def update_board(num, turn):
 def get_board_values():
     """
     Gets the value for the number on the board,
-    whether it is 'X' (players turn) or 'O' (computers turn).
+    Whether it is 'X' (players turn) or 'O' (computers turn).
     """
 
     end_game = False
-    player_turn = 'X'
-    computer_turn = 'O'
+    player_turn = (Fore.GREEN + 'X')
+    computer_turn = (Fore.CYAN + 'O')
     turn_number = 0
 
     while(end_game == False):
         if (turn_number % 2 == 1):
             game_board()
             player_choice = int(input('\nPlease choose a number between 1 - 9:\n'))
+            print('_' * 35)
             if (player_choice >= 1 or player_choice <= 9):
                 update_board(player_choice, player_turn)
                 board_numbers.remove(player_choice) 
@@ -88,12 +94,20 @@ def get_board_values():
             while(True):
                 computer_choice = random.choice(board_numbers)
                 print(f'{computer_choice} was picked by the computer.\n')
+                print('_' * 35)
                 if(computer_choice in board_numbers):
                     update_board(computer_choice, computer_turn)
                     board_numbers.remove(computer_choice)
                     turn_number += 1
                     break
 
+
+def check_winner():
+    """
+    Checks all ways either the player or computer could win.
+    And whether it is the player or computer that wins, or if
+    there is no winner.
+    """
 
 def main():
     """
