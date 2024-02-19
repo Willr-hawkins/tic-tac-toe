@@ -18,7 +18,6 @@ winnerP = (Fore.GREEN + '\nWell Done! The player won.\n')
 winnerC = (Fore.RED + '\nUnlucky! The computer won.\n')
 
 
-
 def new_game():
     """
     Introduce the player to the game, ask for player name input.
@@ -29,6 +28,7 @@ def new_game():
     print('\nThis is a single player game against a computer.\n')
     print('_' * 35)
     player_name = input('\nPlease enter your name:\n')
+
 
 
 def game_board():
@@ -84,7 +84,7 @@ def check_winner(board):
         print('_' * 35)
         return player_turn
     elif (board[0][0] == computer_turn and board[0][1] == computer_turn and board[0][2] == computer_turn):
-        print('winnerC')
+        print(winnerC)
         print('_' * 35)
         return computer_turn
     elif (board[1][0] == player_turn and board[1][1] == player_turn and board[1][2] == player_turn):
@@ -92,7 +92,7 @@ def check_winner(board):
         print('_' * 35)
         return player_turn
     elif (board[1][0] == computer_turn and board[1][1] == computer_turn and board[1][2] == computer_turn):
-        print('winnerC')
+        print(winnerC)
         print('_' * 35)
         return computer_turn
     elif (board[2][0] == player_turn and board[2][1] == player_turn and board[2][2] == player_turn):
@@ -100,7 +100,7 @@ def check_winner(board):
         print('_' * 35)
         return player_turn
     elif (board[2][0] == computer_turn and board[2][1] == computer_turn and board[2][2] == computer_turn):
-        print('winnerC')
+        print(winnerC)
         print('_' * 35)
         return computer_turn
     ### Checks y axis for winner
@@ -117,7 +117,7 @@ def check_winner(board):
         print('_' * 35)
         return player_turn
     elif (board[0][1] == computer_turn and board[1][1] == computer_turn and board[2][1] == computer_turn):
-        print('winnerC')
+        print(winnerC)
         print('_' * 35)
         return computer_turn
     elif (board[0][2] == player_turn and board[1][2] == player_turn and board[2][2] == player_turn):
@@ -125,7 +125,7 @@ def check_winner(board):
         print('_' * 35)
         return player_turn
     elif (board[0][2] == computer_turn and board[1][2] == computer_turn and board[2][2] == computer_turn):
-        print('winnerC')
+        print(winnerC)
         print('_' * 35)
         return computer_turn
     ### check diagonals for winner 
@@ -134,7 +134,7 @@ def check_winner(board):
         print('_' * 35)
         return player_turn
     elif (board[0][0] == computer_turn and board[1][1] == computer_turn and board[2][2] == computer_turn):
-        print('winnerC')
+        print(winnerC)
         print('_' * 35)
         return computer_turn
     elif (board[2][0] == player_turn and board[1][1] == player_turn and board[0][2] == player_turn):
@@ -142,7 +142,7 @@ def check_winner(board):
         print('_' * 35)
         return player_turn
     elif (board[2][0] == computer_turn and board[1][1] == computer_turn and board[0][2] == computer_turn):
-        print('winnerC')
+        print(winnerC)
         print('_' * 35)
         return computer_turn
     ### No winner 
@@ -165,9 +165,9 @@ def get_board_values():
             print('_' * 35)
             if (player_choice >= 1 or player_choice <= 9):
                 update_board(player_choice, player_turn)
-                board_numbers.remove(player_choice) 
+                board_numbers.remove(player_choice)
             else:
-                print('Invalid number, please pick again.')
+                print('Invalid value, computers turn!') 
             turn_number += 1
         else:
             while(True):
@@ -180,10 +180,13 @@ def get_board_values():
                     turn_number += 1
                     break
         
+
+        ### Ends the game once there is a winner
         winner = check_winner(board)
         if (winner != 'N'):
             print('\nGame Over! Thank you for playing!\n')
             break
+
 
 def main():
     """
