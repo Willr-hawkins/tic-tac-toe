@@ -2,7 +2,7 @@
 import random
 from art import *
 import colorama
-from colorama import Fore, Style
+from colorama import Fore 
 
 ### Automatically reset the color.
 colorama.init(autoreset=True)
