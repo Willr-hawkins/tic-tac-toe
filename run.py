@@ -44,7 +44,6 @@ def game_board():
     """
     Creates a board for the game.
     """
-
     for x in range(rows):
         print('\n+---+---+---+')
         print('|', end = '')
@@ -166,17 +165,25 @@ def get_board_values():
     """
     end_game = False
     turn_number = 0
+    
 
     while(end_game == False):
         if (turn_number % 2 == 0):
             game_board()
-            player_choice = int(input('\nPlease choose a number between 1 - 9:\n'))
+
+            while True:
+                player_choice = int(input('\nPlease choose a number between 1 - 9:\n'))
+
+                try:
+                    if player_choice in board_numbers:
+                        raise ValueError('INVALID: You must choose a number between 1 - 9!')    
+                except:
+                    print(f'\nThe player chose position {player_choice}')
+                    break
+
             print('_' * 35)
-            if (player_choice >= 1 or player_choice <= 9):
-                update_board(player_choice, player_turn)
-                board_numbers.remove(player_choice)
-            else:
-                print('Invalid value, computers turn!') 
+            update_board(player_choice, player_turn)
+            board_numbers.remove(player_choice) 
             turn_number += 1
         else:
             while(True):
@@ -195,7 +202,7 @@ def get_board_values():
         if (winner != 'N'):
             print('\nGame Over! Thank you for playing!\n')
             break
-
+       
 
 def main():
     """
