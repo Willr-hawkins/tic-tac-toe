@@ -27,8 +27,17 @@ def new_game():
     print('_' * 35)
     print('\nThis is a single player game against a computer.\n')
     print('_' * 35)
-    player_name = input('\nPlease enter your name:\n')
 
+    while True:
+        player_name = input('\nPlease enter your name:\n')
+        try:
+            player_name = int(player_name)
+            print('\nINVALID: You cannot use a number in your name!')
+            print()
+    
+        except ValueError:
+            print(f'\nThe players name is {player_name}')
+            break
 
 
 def game_board():
