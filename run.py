@@ -87,69 +87,101 @@ def check_winner(board):
     there is no winner.
     """
     ### Checks x axis for winner
-    if  (board[0][0] == player_turn and board[0][1] == player_turn and board[0][2] == player_turn):
+    if  (board[0][0] == player_turn
+        and board[0][1] == player_turn
+        and board[0][2] == player_turn):
         print(winnerP)
         print('_' * 35)
         return player_turn
-    elif (board[0][0] == computer_turn and board[0][1] == computer_turn and board[0][2] == computer_turn):
+    elif (board[0][0] == computer_turn
+        and board[0][1] == computer_turn
+        and board[0][2] == computer_turn):
         print(winnerC)
         print('_' * 35)
         return computer_turn
-    elif (board[1][0] == player_turn and board[1][1] == player_turn and board[1][2] == player_turn):
+    elif (board[1][0] == player_turn
+        and board[1][1] == player_turn
+        and board[1][2] == player_turn):
         print(winnerP)
         print('_' * 35)
         return player_turn
-    elif (board[1][0] == computer_turn and board[1][1] == computer_turn and board[1][2] == computer_turn):
+    elif (board[1][0] == computer_turn
+        and board[1][1] == computer_turn
+        and board[1][2] == computer_turn):
         print(winnerC)
         print('_' * 35)
         return computer_turn
-    elif (board[2][0] == player_turn and board[2][1] == player_turn and board[2][2] == player_turn):
+    elif (board[2][0] == player_turn
+        and board[2][1] == player_turn
+        and board[2][2] == player_turn):
         print(winnerP)
         print('_' * 35)
         return player_turn
-    elif (board[2][0] == computer_turn and board[2][1] == computer_turn and board[2][2] == computer_turn):
+    elif (board[2][0] == computer_turn
+        and board[2][1] == computer_turn
+        and board[2][2] == computer_turn):
         print(winnerC)
         print('_' * 35)
         return computer_turn
     ### Checks y axis for winner
-    elif (board[0][0] == player_turn and board[1][0] == player_turn and board[2][0] == player_turn):
+    elif (board[0][0] == player_turn
+        and board[1][0] == player_turn
+        and board[2][0] == player_turn):
         print(winnerP)
         print('_' * 35)
         return player_turn
-    elif (board[0][0] == computer_turn and board[1][0] == computer_turn and board[2][0] == computer_turn):
+    elif (board[0][0] == computer_turn
+        and board[1][0] == computer_turn
+        and board[2][0] == computer_turn):
         print(winnerC)
         print('_' * 35)
         return computer_turn
-    elif (board[0][1] == player_turn and board[1][1] == player_turn and board[2][1] == player_turn):
+    elif (board[0][1] == player_turn
+        and board[1][1] == player_turn
+        and board[2][1] == player_turn):
         print(winnerP)
         print('_' * 35)
         return player_turn
-    elif (board[0][1] == computer_turn and board[1][1] == computer_turn and board[2][1] == computer_turn):
+    elif (board[0][1] == computer_turn
+        and board[1][1] == computer_turn
+        and board[2][1] == computer_turn):
         print(winnerC)
         print('_' * 35)
         return computer_turn
-    elif (board[0][2] == player_turn and board[1][2] == player_turn and board[2][2] == player_turn):
+    elif (board[0][2] == player_turn
+        and board[1][2] == player_turn
+        and board[2][2] == player_turn):
         print(winnerP)
         print('_' * 35)
         return player_turn
-    elif (board[0][2] == computer_turn and board[1][2] == computer_turn and board[2][2] == computer_turn):
+    elif (board[0][2] == computer_turn
+        and board[1][2] == computer_turn
+        and board[2][2] == computer_turn):
         print(winnerC)
         print('_' * 35)
         return computer_turn
     ### check diagonals for winner 
-    elif (board[0][0] == player_turn and board[1][1] == player_turn and board[2][2] == player_turn):
+    elif (board[0][0] == player_turn
+        and board[1][1] == player_turn
+        and board[2][2] == player_turn):
         print(winnerP)
         print('_' * 35)
         return player_turn
-    elif (board[0][0] == computer_turn and board[1][1] == computer_turn and board[2][2] == computer_turn):
+    elif (board[0][0] == computer_turn
+        and board[1][1] == computer_turn
+        and board[2][2] == computer_turn):
         print(winnerC)
         print('_' * 35)
         return computer_turn
-    elif (board[2][0] == player_turn and board[1][1] == player_turn and board[0][2] == player_turn):
+    elif (board[2][0] == player_turn
+        and board[1][1] == player_turn
+        and board[0][2] == player_turn):
         print(winnerP)
         print('_' * 35)
         return player_turn
-    elif (board[2][0] == computer_turn and board[1][1] == computer_turn and board[0][2] == computer_turn):
+    elif (board[2][0] == computer_turn
+        and board[1][1] == computer_turn
+        and board[0][2] == computer_turn):
         print(winnerC)
         print('_' * 35)
         return computer_turn
