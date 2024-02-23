@@ -32,7 +32,7 @@ def new_game():
         player_name = input('\nPlease enter your name:\n')
         try:
             player_name = int(player_name)
-            print('\nINVALID: You cannot use a number in your name!')
+            print(Fore.RED + '\nINVALID: You cannot use a number in your name!')
             print()
     
         except ValueError:
@@ -203,15 +203,19 @@ def get_board_values():
         if (turn_number % 2 == 0):
             game_board()
 
+            ### Validate the players input.
             while True:
                 player_choice = int(input('\nPlease choose a number between 1 - 9:\n'))
 
                 try:
                     if player_choice in board_numbers:
-                        raise ValueError('INVALID: You must choose a number between 1 - 9!')    
+                        raise ValueError
+                    print(Fore.RED + '\nINVALID: You must choose a number between 1 - 9!')   
                 except:
                     print(f'\nThe player chose position {player_choice}')
                     break
+                    
+                       
 
             print('_' * 35)
             update_board(player_choice, player_turn)
