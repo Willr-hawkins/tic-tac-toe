@@ -207,7 +207,7 @@ def get_board_values():
             player_choice = input('\nPlease choose a number between 1 - 9:\n')
 
             while player_choice not in str(board_numbers):
-                print(Fore.RED + '\nINVALID: You must choose a number between 1 - 9!')
+                print(Fore.RED + '\nINVALID: please pick again!')
                 player_choice = input('\nPlease choose a number between 1 - 9:\n')
             
             ### Changes the user input into a integer.
