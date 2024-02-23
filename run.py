@@ -197,29 +197,25 @@ def get_board_values():
     """
     end_game = False
     turn_number = 0
-    
 
     while(end_game == False):
+        
         if (turn_number % 2 == 0):
             game_board()
 
             ### Validate the players input.
-            while True:
-                player_choice = int(input('\nPlease choose a number between 1 - 9:\n'))
+            player_choice = input('\nPlease choose a number between 1 - 9:\n')
 
-                try:
-                    if player_choice in board_numbers:
-                        raise ValueError
-                    print(Fore.RED + '\nINVALID: You must choose a number between 1 - 9!')   
-                except:
-                    print(f'\nThe player chose position {player_choice}')
-                    break
-                    
-                       
+            while player_choice not in str(board_numbers):
+                print(Fore.RED + '\nINVALID: You must choose a number between 1 - 9!')
+                player_choice = input('\nPlease choose a number between 1 - 9:\n')
+            
+            ### Changes the user input into a integer.
+            player_position = int(player_choice)
 
             print('_' * 35)
-            update_board(player_choice, player_turn)
-            board_numbers.remove(player_choice) 
+            update_board(player_position, player_turn)
+            board_numbers.remove(player_position) 
             turn_number += 1
         else:
             while(True):
