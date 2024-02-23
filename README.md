@@ -19,3 +19,13 @@ The player can then choose a position on the board which will be displayed with 
 Then the computer will pick a positon at random and will be displayed with a 'O'.
 
 The player and computer will take it in turn until either player gets 3 positions in a row and wins the game.
+
+## Features
+
+### Exsisting Features
+
+- __Game Board__
+
+    - Once the player enters their name a game baord will be generated.
+
+![GameBoard](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/5ff15a89-0ee2-4d8a-82f8-5492d43fb87d)
