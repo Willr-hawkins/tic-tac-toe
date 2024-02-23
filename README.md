@@ -43,9 +43,12 @@ The player and computer will take it in turn until either player gets 3 position
     - You cannot enter a number as the player name.
     - You cannot pick a number that is not between 1 - 9.
     - You cannot pick a number that is already taken.
+    - You cannot enter letters when choosing a position.
 
-![nameValidation](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/925ab16a-bd25-4564-92ea-228f46a1eee2)
+![nameValidation](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/8a77f8a4-9dbe-4f02-919f-31410201b6f8)
 
-![NumberValidation](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/8e4fbfac-5092-4263-b5a9-064b8213bf5a)
+![NumberValidation](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/9bfe52e0-7bc8-4540-b1f3-db3b9c0253e2)
 
-![NumberValidation](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/b6102679-36d7-45da-9a20-b33cbc88f468)
+![NumberValidation](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/0cb18672-16f3-461b-a054-bb14810c1163)
+
+![NumberValidation](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/0006bc16-2eaa-4336-978f-5d2920188c2c)
