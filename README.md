@@ -24,8 +24,16 @@ The player and computer will take it in turn until either player gets 3 position
 
 ### Exsisting Features
 
-- __Game Board__
+- __Game Board Generation__
 
     - Once the player enters their name a game baord will be generated.
 
 ![GameBoard](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/5ff15a89-0ee2-4d8a-82f8-5492d43fb87d)
+
+- __Game Play__
+
+    - Player will play against a computer.
+    - The game accepts user input.
+    - Updates the game board to keep up with the 'Score'.
+
+![GamePlay](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/f32e0f58-3cd1-4b40-8b0a-5207867b42be)
