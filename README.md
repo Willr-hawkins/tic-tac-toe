@@ -52,3 +52,27 @@ The player and computer will take it in turn until either player gets 3 position
 ![NumberValidation](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/0cb18672-16f3-461b-a054-bb14810c1163)
 
 ![NumberValidation](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/0006bc16-2eaa-4336-978f-5d2920188c2c)
+
+
+## Design Features
+
+### Game Title
+
+    - For the title of the game I used ASCII art to generate an interesting and eye catching title. 
+
+![title](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/d70b0e4f-b7b6-4b2d-80f6-512836640571)
+
+### Text colors 
+
+- __I used colorama to change the color of certain text within the game to enhance specific parts of the terminal and to make the game more eye catching.__
+
+    - For Invalid input messages I used colorama to make the text red.
+    - For the 'X' on the board to show the player positions I used colorama to make the text blue.
+    - For the 'O' on the board to show the computer positons I used colorama to make the text lightMagenta.
+    - I used colorama to make the winner message red and the looser message red. 
+
+![errorMessage](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/9b38be5a-21f2-4f0c-9fa8-09f16b43a955)
+
+![boardColors](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/6c89ed90-e2bf-4dbb-855e-92eb21c43e72)
+
+![winnerMessage](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/fee6f8ea-c739-4942-9262-bc5c86d2879b)
