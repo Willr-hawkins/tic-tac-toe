@@ -215,6 +215,12 @@ def get_board_values():
             # Validate the players input.
             player_choice = input('\nPlease choose a number between 1 - 9:\n')
 
+            if player_choice == '':
+               print(Fore.RED + '\nINVALID: please pick again!')
+               player_choice = input(
+                    '\nPlease choose a number between 1 - 9:\n'
+                    ) 
+
             while player_choice not in str(board_numbers):
                 print(Fore.RED + '\nINVALID: please pick again!')
                 player_choice = input(
