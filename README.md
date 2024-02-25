@@ -40,10 +40,11 @@ The player and computer will take it in turn until either player gets 3 position
 
 - __Input Validation__
 
-    - You cannot enter a number as the player name.
-    - You cannot pick a number that is not between 1 - 9.
-    - You cannot pick a number that is already taken.
-    - You cannot enter letters when choosing a position.
+    - User cannot enter a number as the player name.
+    - User cannot pick a number that is not between 1 - 9.
+    - User cannot pick a number that is already taken.
+    - User cannot enter letters when choosing a position.
+    - User cannot leave any input blank.
 
 ![nameValidation](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/8a77f8a4-9dbe-4f02-919f-31410201b6f8)
 
@@ -52,6 +53,8 @@ The player and computer will take it in turn until either player gets 3 position
 ![NumberValidation](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/0cb18672-16f3-461b-a054-bb14810c1163)
 
 ![NumberValidation](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/0006bc16-2eaa-4336-978f-5d2920188c2c)
+
+![blankValidation](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/aa763ac2-a9af-4c60-b326-074265528401)
 
 
 ## Design Features
