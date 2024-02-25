@@ -30,14 +30,23 @@ def new_game():
 
     while True:
         player_name = input('\nPlease enter your name:\n')
+
+        if player_name == '':
+                print(Fore.RED + 'INVALID: You cannot leave name blank!')
+                player_name = input('\nPlease enter your name:\n')
+
         try:
-            player_name = int(player_name)
+            player_name == int(player_name)
             print(Fore.RED + '\nINVALID: You cannot input numbers!')
             print()
 
         except ValueError:
             print(f'\nThe players name is {player_name}')
             break
+    
+    if player_name == '':
+        print(Fore.RED + 'INVALID: You cannot leave name blank!')
+        player_name = input('\nPlease enter your name:\n')
 
 
 def game_board():
