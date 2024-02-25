@@ -58,7 +58,7 @@ The player and computer will take it in turn until either player gets 3 position
 
 ### Game Title
 
-    - For the title of the game I used ASCII art to generate an interesting and eye catching title. 
+- __For the title of the game I used ASCII art to generate an interesting and eye catching title.__ 
 
 ![title](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/d70b0e4f-b7b6-4b2d-80f6-512836640571)
 
