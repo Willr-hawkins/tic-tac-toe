@@ -216,7 +216,9 @@ def get_board_values():
             player_choice = input('\nPlease choose a number between 1 - 9:\n')
 
             if player_choice == '':
-               print(Fore.RED + '\nINVALID: please pick again!')
+               print(
+                   Fore.RED + '\nINVALID: You cannot leave this input blank!\n'
+                   )
                player_choice = input(
                     '\nPlease choose a number between 1 - 9:\n'
                     ) 
