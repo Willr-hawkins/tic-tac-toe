@@ -32,8 +32,8 @@ def new_game():
         player_name = input('\nPlease enter your name:\n')
 
         if player_name == '':
-                print(Fore.RED + 'INVALID: You cannot leave name blank!')
-                player_name = input('\nPlease enter your name:\n')
+            print(Fore.RED + 'INVALID: You cannot leave name blank!')
+            player_name = input('\nPlease enter your name:\n')
 
         try:
             player_name == int(player_name)
@@ -43,7 +43,7 @@ def new_game():
         except ValueError:
             print(f'\nThe players name is {player_name}')
             break
-    
+
     if player_name == '':
         print(Fore.RED + 'INVALID: You cannot leave name blank!')
         player_name = input('\nPlease enter your name:\n')
@@ -216,12 +216,12 @@ def get_board_values():
             player_choice = input('\nPlease choose a number between 1 - 9:\n')
 
             if player_choice == '':
-               print(
+                print(
                    Fore.RED + '\nINVALID: You cannot leave this input blank!\n'
                    )
-               player_choice = input(
+                player_choice = input(
                     '\nPlease choose a number between 1 - 9:\n'
-                    ) 
+                    )
 
             while player_choice not in str(board_numbers):
                 print(Fore.RED + '\nINVALID: please pick again!')

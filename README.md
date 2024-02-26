@@ -79,3 +79,19 @@ The player and computer will take it in turn until either player gets 3 position
 ![boardColors](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/6c89ed90-e2bf-4dbb-855e-92eb21c43e72)
 
 ![winnerMessage](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/fee6f8ea-c739-4942-9262-bc5c86d2879b)
+
+## Testing 
+
+- __For this project I have done the following testing:__
+
+    - I have passed my code through the PEP8 linter.
+    - I have passed through invalid inputs such as: Given string when numbers are expected, Given Out of range numbers for the position on the board, and given the same input twice.
+    - I have tested the game through my local terminal and through the Code Institute Heroku terminal.
+
+### Validator testing
+
+- __PEP8__
+
+    - When passing my code through the PEP8 linter no errors where returned.
+
+![PEP8]()
