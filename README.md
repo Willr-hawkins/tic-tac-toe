@@ -95,3 +95,13 @@ The player and computer will take it in turn until either player gets 3 position
     - When passing my code through the PEP8 linter no errors where returned.
 
 ![PEP8](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/43fa5ada-b09e-48c7-b4d5-70eee9160165)
+
+## Deployment
+
+- __This project has been deployed using the Code Institutes mock terminal for Heroku, and the following steps were used:__
+
+    - Clone the GitHub repository
+    - Create a new Heroku app
+    - Set the buildpacks in the following order to Python and NodeJS.
+    - Link the Heroku app to the GitHub repository
+    - Click deploy
