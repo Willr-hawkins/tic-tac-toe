@@ -16,6 +16,7 @@ player_turn = (Fore.BLUE + 'X')
 computer_turn = (Fore.LIGHTMAGENTA_EX + 'O')
 winnerP = (Fore.GREEN + '\nWell Done! The player won.\n')
 winnerC = (Fore.RED + '\nUnlucky! The computer won.\n')
+noWinner = (Fore.YELLOW + '\nNo winner! It is a draw.\n')
 
 
 def new_game():
@@ -255,6 +256,11 @@ def get_board_values():
             print('\nGame Over! Thank you for playing!\n')
             break
 
+        if board_numbers == []:
+            print(Fore.YELLOW + '\nNo winner! It is a draw.\n')
+            print('\nGame Over! Thank you for playing!\n')
+            break
+        
 
 def main():
     """
