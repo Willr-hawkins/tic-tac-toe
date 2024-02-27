@@ -260,7 +260,7 @@ def get_board_values():
             print(Fore.YELLOW + '\nNo winner! It is a draw.\n')
             print('\nGame Over! Thank you for playing!\n')
             break
-        
+     
 
 def main():
     """
