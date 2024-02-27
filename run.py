@@ -49,6 +49,7 @@ def new_game():
         player_name = input('\nPlease enter your name:\n')
 
 
+# Code inpsired by Shaun Halverson youtube video
 def game_board():
     """
     Creates a board for the game.
@@ -61,6 +62,7 @@ def game_board():
     print('\n+---+---+---+')
 
 
+# Code inpsired by Shaun Halverson youtube video
 def update_board(num, turn):
     """
     Updates the numbers on the game board.
