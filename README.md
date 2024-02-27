@@ -115,3 +115,5 @@ The player and computer will take it in turn until either player gets 3 position
 ![Game_board](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/bccb64cd-08fb-4841-a412-0268ea543423)
 
 ![update_board](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/9bece478-cb23-4015-8224-a8853f0e9b07)
+
+- __My Code Institute mentor Spencer Barriball for support and guidance throughtout the duration of the project.__
