@@ -72,13 +72,15 @@ The player and computer will take it in turn until either player gets 3 position
     - For Invalid input messages I used colorama to make the text red.
     - For the 'X' on the board to show the player positions I used colorama to make the text blue.
     - For the 'O' on the board to show the computer positons I used colorama to make the text lightMagenta.
-    - I used colorama to make the winner message red and the looser message red. 
+    - I used colorama to make the winner message red and the looser message red aswell as the draw message yellow. 
 
 ![errorMessage](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/9b38be5a-21f2-4f0c-9fa8-09f16b43a955)
 
 ![boardColors](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/6c89ed90-e2bf-4dbb-855e-92eb21c43e72)
 
 ![winnerMessage](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/fee6f8ea-c739-4942-9262-bc5c86d2879b)
+
+![drawMessage](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/f38645d6-d0d4-4953-a8b3-3e80600d7388)
 
 ## Testing 
 
