@@ -105,3 +105,13 @@ The player and computer will take it in turn until either player gets 3 position
     - Set the buildpacks in the following order to Python and NodeJS.
     - Link the Heroku app to the GitHub repository
     - Click deploy
+
+## credits 
+
+- __Shaun Halverson youtube video for inspiration on the game_board and update_board functions__
+
+    - [Link to the video can be found here](https://www.youtube.com/watch?v=M3G1ZgOMFxo)
+
+![Game_board](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/bccb64cd-08fb-4841-a412-0268ea543423)
+
+![update_board](https://github.com/Willr-hawkins/tic-tac-toe/assets/148203271/9bece478-cb23-4015-8224-a8853f0e9b07)
